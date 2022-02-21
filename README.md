@@ -9,34 +9,37 @@ The Game Idea: An inception movie inspired game.
 TO DOs: 
 
   - [ ] The Gameplay: 
-    - [ ] The platformer controller. [P]
+    - [ ] The platformer controller. [H]
+    - [ ] Normal enemy AI. [H]
+    - [ ] Boss enemy AI. [H]
     - [ ] The level design. [H]
-    - [ ] The GUI.
+    - [ ] The game GUI. [H]
   - [ ]	The Game story: 
-    - [ ]	The game lore (story). [N]
-    - [ ]	The quests and levels.
-    - [ ]	The game starting and ending.
+    - [x]	The game lore (story). [P]
+    - [ ]	The game starting and ending. [P]
   - [ ]	The Music and sounds: 
-    - [ ]	The normal level music track.
-    - [ ]	The menu music track.
-    - [ ]	The (dream faze) level music track.
-    - [ ]	The sfx of the player.
-    - [ ]	The sfx of the menus and GUI.
-    - [ ]	The sfx of the gameplay objects.
+    - [ ]	The normal level music track. [H]
+    - [ ]	The boss level music track. [H]
+    - [ ]	The menu music track. [H]
+    - [ ]	The sfx of the player. [H]
+    - [ ]	The sfx of the normal enemy. [H]
+    - [ ]	The sfx of the boss enemy. [H]
+    - [ ]	The sfx of the menus and GUI. [P]
   - [ ]	The Art: 
-    - [ ]	Player character(s).
-    - [ ] Levels Tilesets.
-    - [ ]	GUI.
-  - [ ]	The Visual Effects: 
-    - [ ]	Player vfx.
-    - [ ]	Levels vfx.
-    - [ ]	Going into dream faze vfx.
+    - [ ]	Player character. [P]
+    - [ ]	Normal enemy character. [P]
+    - [ ]	Boss enemy character. [P]
+    - [ ]	The main character. [P]
+    - [ ]	Levels Tilesets. [P]
+    - [ ]	GUI. [P]
+  - [ ]	The Visual Effects and polish: 
+    - [ ]	Player vfx. [P]
+    - [ ]	Enemies vfx.
+    - [ ]	Levels vfx. [P]
 
 The team: 
   -	[P] Pinkyy:
     -	Game developer and programmer.
   -	[H] Hoanhck:
     -	Game developer and programmer.
-  -	[N] Nour:
-    -	Story Writer.
 
