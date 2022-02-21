@@ -1,7 +1,6 @@
 extends "res://src/actor/Actor.gd"
 
 onready var dash_timer = $DashTimer
-onready var tween = $Tween
 
 var jump_count = 0
 var dash_left_count = 0
