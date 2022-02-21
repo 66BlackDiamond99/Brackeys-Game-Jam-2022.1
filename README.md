@@ -15,7 +15,7 @@ TO DOs:
     - [ ] The level design. [H]
     - [ ] The game GUI. [H]
   - [ ]	The Game story: 
-    - [ ]	The game lore (story). [P]
+    - [x]	The game lore (story). [P]
     - [ ]	The game starting and ending. [P]
   - [ ]	The Music and sounds: 
     - [ ]	The normal level music track. [H]
