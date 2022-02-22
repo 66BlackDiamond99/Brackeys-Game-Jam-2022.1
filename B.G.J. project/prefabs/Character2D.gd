@@ -1,9 +1,10 @@
 extends "res://src/actor/Actor.gd"
 
 onready var anim_sprite = $AnimatedSprite
-
+onready var attack_timer = $AttackTimer
 var jump_count = 0
 var is_facing_right = true
+var attack_available = true
 
 func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta
@@ -23,6 +24,12 @@ func _physics_process(delta: float) -> void:
 		anim_sprite.play("idle")
 		velocity.x = 0
 	
+	if Input.is_action_pressed("attack") && attack_available:
+		attack_available = false
+		attack_timer.start(0.5)
+		var bullet = load("res://prefabs/Bullet.tscn").instance()
+		bullet.position = $BulletPos.position
+		add_child(bullet)
 	if Input.is_action_pressed("jump"):
 		_jump()
 	
@@ -37,7 +44,10 @@ func _jump():
 		jump_count += 1
 		velocity.y = -move_speed.y
 
-
 func _on_AnimatedSprite_animation_finished():
 	if anim_sprite.animation == "jump":
 		anim_sprite.play("idle")
+
+
+func _on_AttackTimer_timeout():
+	attack_available = true
