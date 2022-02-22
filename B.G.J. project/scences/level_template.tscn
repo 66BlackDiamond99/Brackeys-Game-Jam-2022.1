@@ -31,9 +31,9 @@ position = Vector2( 89, 569 )
 move_speed = Vector2( 300, 1000 )
 
 [node name="AnimatedSprite" parent="Character2D" index="0"]
-frame = 1
+frame = 0
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 271.988, 27.339 )
+position = Vector2( 931.629, 467.567 )
 
 [editable path="Character2D"]
