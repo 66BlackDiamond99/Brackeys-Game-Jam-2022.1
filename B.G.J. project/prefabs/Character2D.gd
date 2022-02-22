@@ -24,12 +24,11 @@ func _physics_process(delta: float) -> void:
 		anim_sprite.play("idle")
 		velocity.x = 0
 	
-	if Input.is_action_pressed("attack") && attack_available:
-		attack_available = false
-		attack_timer.start(0.5)
+	if Input.is_action_just_pressed("attack"):
 		var bullet = load("res://prefabs/Bullet.tscn").instance()
-		bullet.position = $BulletPos.position
-		add_child(bullet)
+		bullet.position = $BulletPos.global_position
+		bullet.dir = Vector2.RIGHT if is_facing_right else Vector2.LEFT
+		get_parent().add_child(bullet)
 	if Input.is_action_pressed("jump"):
 		_jump()
 	
@@ -47,7 +46,3 @@ func _jump():
 func _on_AnimatedSprite_animation_finished():
 	if anim_sprite.animation == "jump":
 		anim_sprite.play("idle")
-
-
-func _on_AttackTimer_timeout():
-	attack_available = true

@@ -14,7 +14,7 @@
 [ext_resource path="res://assets/enviroment/player character/32 x 32 platform character_jump_1.png" type="Texture" id=12]
 [ext_resource path="res://assets/enviroment/player character/32 x 32 platform character_run_5.png" type="Texture" id=13]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
@@ -32,7 +32,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 11.5, 18.5 )
 
 [node name="Character2D" type="KinematicBody2D"]
@@ -41,14 +41,14 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -21 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "idle"
 frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1.5, -19.5 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -60,10 +60,9 @@ drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
 
-[node name="BulletPos" type="Node2D" parent="."]
-position = Vector2( 30, -13 )
-
 [node name="AttackTimer" type="Timer" parent="."]
 
+[node name="BulletPos" type="Position2D" parent="."]
+position = Vector2( 24.8907, -17.7791 )
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
