@@ -30,10 +30,28 @@ tile_data = PoolIntArray( 1048591, 18, 0 )
 position = Vector2( 89, 569 )
 move_speed = Vector2( 300, 1000 )
 
-[node name="AnimatedSprite" parent="Character2D" index="0"]
-frame = 0
-
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 931.629, 467.567 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 912.001, 347.696 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 789.326, 237.639 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 572.016, 152.818 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 362.417, 98.8408 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 193.476, 157.725 )
+
+[node name="Enemy7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 163.333, 265.679 )
+
+[node name="Enemy8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 356.108, 349.799 )
 
 [editable path="Character2D"]

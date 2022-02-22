@@ -77,7 +77,7 @@ func _physics_process(delta):
 	velocity.x += BULLET_SPEED * dir.x
 	move_and_collide(velocity)
 
-func _on_HurtBox_area_entered(area):
+func _on_HitBox_area_entered(area: Area2D) -> void:
 	queue_free()
 "
 
@@ -101,7 +101,7 @@ script = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "idle"
-frame = 27
+frame = 35
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -109,11 +109,13 @@ visible = false
 position = Vector2( 7, 0 )
 shape = SubResource( 3 )
 
-[node name="HurtBox" type="Area2D" parent="."]
+[node name="HitBox" type="Area2D" parent="." groups=[
+"Bullet",
+]]
 collision_layer = 8
 collision_mask = 2147483654
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2( 8, 0 )
 shape = SubResource( 4 )
-[connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
+[connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]

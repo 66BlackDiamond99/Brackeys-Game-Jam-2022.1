@@ -9,3 +9,9 @@ func _physics_process(delta: float) -> void:
 	if is_on_wall():
 		velocity.x *= -1.0
 	velocity.y = move_and_slide(velocity, FLOOR_NORMAL).y
+
+
+func _on_HurtBox_area_entered(area: Area2D) -> void:
+	print(area)
+	if area.is_in_group("Bullet"):
+		queue_free()
